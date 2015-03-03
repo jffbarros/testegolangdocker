@@ -2,7 +2,7 @@
 # and a workspace (GOPATH) configured at /go.
 FROM golang
 
-RUN go get github.com/jffbarros/testegolangdocker
+RUN go get -u github.com/jffbarros/testegolangdocker
 RUN go install github.com/jffbarros/testegolangdocker
 
 # Run the outyet command by default when the container starts.
