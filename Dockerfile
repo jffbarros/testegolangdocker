@@ -3,7 +3,7 @@
 FROM golang
 
 RUN go get -u github.com/jffbarros/testegolangdocker
-RUN go install github.com/jffbarros/testegolangdocker
+RUN go install -a github.com/jffbarros/testegolangdocker
 
 # Run the outyet command by default when the container starts.
 ENTRYPOINT /go/bin/testegolangdocker
