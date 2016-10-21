@@ -90,7 +90,7 @@ func TestIntegration(t *testing.T) {
 	<-sleep // Permit poll loop to stop sleeping.
 	<-done  // Wait for poller to see the "OK" status and exit.
 
-	/// Make second request to the server.
+	//// Make second request to the server.
 	w = httptest.NewRecorder()
 	s.ServeHTTP(w, r)
 	if b := w.Body.String(); !strings.Contains(b, "YES!") {
